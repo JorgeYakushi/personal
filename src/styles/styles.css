@@ -1,0 +1,239 @@
+body,
+body * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+section,
+footer {
+  margin-top: 2rem;
+}
+
+.nav__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+.hamburger {
+  padding: 0.5rem 0.5rem 0 0;
+}
+
+.nav__list {
+  display: none;
+}
+
+.intro__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5rem;
+  padding-left: 1rem;
+}
+
+.intro__small {
+  color: #91457f;
+}
+
+.intro__big {
+  color: #5f4b8b;
+  font-weight: 900;
+}
+
+.section__container {
+  width: 90%;
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section__container > *:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.section__title {
+  color: #91457f;
+  font-weight: 700;
+}
+
+.section__intro {
+  color: #5f4b8b;
+}
+
+.about__tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tech__list {
+  list-style: none;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  margin-bottom: 1rem;
+}
+
+.tech__list .list__title {
+  color: #91457f;
+  margin-bottom: 0.5rem;
+}
+
+.tech__list li {
+  color: #5f4b8b;
+}
+
+.project__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  margin-left: 5%;
+  -webkit-box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.card__content {
+  padding: 1rem;
+}
+
+.card__content > *:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.card__title {
+  color: #91457f;
+  font-weight: 700;
+}
+
+.card__img {
+  display: none;
+}
+
+.card__text {
+  color: #5f4b8b;
+}
+
+.project__skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.project__skill {
+  border-radius: 4px;
+  border: 2px solid #91457f;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+  color: #5f4b8b;
+}
+
+.project__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.project__link {
+  padding: 0.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.project__source {
+  color: #5f4b8b;
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.project__source:hover {
+  color: #5f4b8b;
+  opacity: 0.5;
+}
+
+.project__demo {
+  color: #f5f5f5;
+  background-color: #5f4b8b;
+  margin-left: 2rem;
+}
+
+.project__demo:hover {
+  background-color: rgba(95, 75, 139, 0.5);
+}
+
+.project__icon {
+  margin-left: 0.25rem;
+  width: 1rem;
+}
+
+.contact__text {
+  font-weight: 700;
+}
+
+.contact__list {
+  list-style: none;
+}
+
+.contact__list > li {
+  margin-bottom: 0.75rem;
+}
+
+.contact__link {
+  text-decoration: none;
+  color: #5f4b8b;
+  display: inline-block;
+}
+
+.contact__icon {
+  width: 1rem;
+  margin-right: 0.25rem;
+  fill: #5f4b8b;
+}
+
+.footer__container {
+  margin-bottom: 3rem;
+}
+
+.footer__container > p {
+  color: #5f4b8b;
+  text-align: center;
+  font-size: 0.75rem;
+}
+/*# sourceMappingURL=styles.css.map */
