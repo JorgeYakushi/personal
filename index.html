@@ -15,7 +15,7 @@
   <body>
     <header>
       <nav class="nav__container">
-        <button class="hamburger" type="button">
+        <button class="hamburger">
           <span class="hamburger-box hamburger--spin">
             <span class="hamburger-inner"></span>
           </span>
@@ -95,8 +95,13 @@
                 <span class="project__skill">JavaScript</span>
               </div>
               <div class="project__links">
-                <a href="" class="project__link project__source">View Source </a
-                ><a href="" class="project__link project__demo">Live Demo </a>
+                <a href="" class="project__link project__source">
+                  <p>View Source</p>
+                  <svg class="project__icon">
+                    <use href="#icon--github" class="project__icon"></use>
+                  </svg>
+                </a>
+                <a href="" class="project__link project__demo">Live Demo </a>
               </div>
             </div>
           </div>
@@ -138,6 +143,7 @@
       class="project__icon"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 496 512"
+      id="icon--github"
     >
       <path
         fill="currentColor"
