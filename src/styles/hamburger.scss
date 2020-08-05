@@ -23,7 +23,7 @@ $color--accent: #5f4b8b;
 
 .hamburger-box {
   width: 36px;
-  height: 16px;
+  height: 19px;
   display: inline-block;
   position: relative;
 }
@@ -51,10 +51,10 @@ $color--accent: #5f4b8b;
   display: block;
 }
 .hamburger-inner::before {
-  top: -4.5px;
+  top: -5px;
 }
 .hamburger-inner::after {
-  bottom: -5.5px;
+  bottom: -5px;
 }
 
 .hamburger--spin .hamburger-inner {

@@ -27,7 +27,7 @@
 
 .hamburger-box {
   width: 36px;
-  height: 16px;
+  height: 19px;
   display: inline-block;
   position: relative;
 }
@@ -63,11 +63,11 @@
 }
 
 .hamburger-inner::before {
-  top: -4.5px;
+  top: -5px;
 }
 
 .hamburger-inner::after {
-  bottom: -5.5px;
+  bottom: -5px;
 }
 
 .hamburger--spin .hamburger-inner {

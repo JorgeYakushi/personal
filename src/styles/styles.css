@@ -146,6 +146,7 @@ footer {
 
 .section__intro {
   color: #5f4b8b;
+  font-weight: 700;
 }
 
 .about__tech {
@@ -369,7 +370,7 @@ li {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .hamburger {
     display: none;
   }
@@ -407,6 +408,25 @@ li {
   }
   .nav__list a {
     font-size: 1.15rem;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body > * {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  body section:nth-child(3),
+  body section:nth-child(4) {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
