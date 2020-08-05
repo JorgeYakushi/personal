@@ -63,7 +63,7 @@
 }
 
 .hamburger-inner::before {
-  top: -6.5px;
+  top: -4.5px;
 }
 
 .hamburger-inner::after {

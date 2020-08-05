@@ -4,12 +4,24 @@ $color--accent--rgb: 95, 75, 139;
 $color--alt: #91457f;
 $color--analogous: #196ebd;
 $f-family: "Lato", sans-serif;
+//base
+
+html {
+  scroll-behavior: smooth;
+}
 body,
 body * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: $f-family;
+}
+
+body {
+  background-color: $color--main;
+}
+section {
+  scroll-margin-top: 3rem;
 }
 section,
 footer {
@@ -22,22 +34,58 @@ footer {
   justify-content: flex-end;
   position: fixed;
   width: 100vw;
+  min-height: 3rem;
   top: 0;
+  background-color: rgba($color--main, 0.8);
 }
 .hamburger {
   appearance: none;
   padding: 0.5rem 0.5rem 0 0;
+  z-index: 2;
+}
+.nav__list__container {
+  position: fixed;
+  min-width: 50vw;
+  background-color: $color--main;
+  height: 100vh;
+  transition: transform 0.5s;
+  box-shadow: -2px 0px 4px 1px #ccc;
 }
 .nav__list {
-  display: none;
-}
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  li:not(:first-child) {
+    margin-top: 4rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color--accent;
+    font-size: 1.35rem;
+    font-weight: 900;
+    cursor: pointer;
+  }
+}
+.nav__list--passive {
+  transform: translateX(125%);
+}
+.nav__list--active {
+  transform: translateX(0%);
+}
 //header -- intro
 .intro__container {
   display: flex;
   flex-direction: column;
-  margin-top: 5rem;
-  padding-left: 1rem;
+  margin-top: 3rem;
+  width: 90%;
+  margin-left: 5%;
 }
 
 .intro__small {
@@ -47,6 +95,7 @@ footer {
 .intro__big {
   color: $color--accent;
   font-weight: 900;
+  padding-left: 2.5%;
 }
 
 //section common
@@ -74,6 +123,7 @@ footer {
 .about__tech {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .tech__list {
   list-style: none;
@@ -83,9 +133,6 @@ footer {
     0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 1rem;
-  &:nth-child(even) {
-    margin-left: 1rem;
-  }
 }
 
 .list__title {
@@ -98,11 +145,20 @@ li {
 }
 
 // projects
+
+.portfolio__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  > :not(:first-child) {
+    margin-top: 5%;
+  }
+}
 .project__card {
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin-left: 5%;
+
   box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05),
     0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -141,10 +197,10 @@ li {
 }
 .project__links {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .project__link {
-  padding: 0.75rem;
+  padding: 0.5rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 700;
@@ -163,23 +219,25 @@ li {
 .project__demo {
   color: $color--main;
   background-color: $color--accent;
-  margin-left: 2rem;
+  margin-left: 1rem;
   &:hover {
     background-color: rgba($color--accent, 0.5);
   }
 }
 .project__icon {
-  margin-left: 0.25rem;
+  margin-left: 0.35rem;
   width: 1rem;
-  height: 1rem;
+  height: 1.25rem;
 }
 
 // contact
 .contact__text {
   font-weight: 700;
+  padding-bottom: 0.5rem;
 }
 .contact__list {
   list-style: none;
+  padding-left: 5%;
   > li {
     margin-bottom: 0.75rem;
   }
@@ -187,11 +245,12 @@ li {
 .contact__link {
   text-decoration: none;
   color: $color--accent;
-  display: inline-block;
+  display: flex;
 }
 .contact__icon {
+  height: 1.25rem;
   width: 1rem;
-  margin-right: 0.25rem;
+  margin-right: 0.35rem;
   fill: $color--accent;
 }
 
@@ -203,4 +262,66 @@ li {
   color: $color--accent;
   text-align: center;
   font-size: 0.75rem;
+}
+
+.svg__container {
+  display: none;
+}
+
+@media only screen and (min-width: 650px) {
+  .tech__list {
+    flex: 0 0 20%;
+  }
+
+  .contact__content {
+    display: flex;
+    flex-direction: row;
+    > div {
+      flex: 0 0 50%;
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .portfolio__projects {
+    > :nth-child(2) {
+      margin-top: 0%;
+    }
+  }
+  .project__card {
+    flex: 0 0 45%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav__list__container {
+    position: static;
+    transform: translateX(0%);
+    height: auto;
+    min-width: 100vw;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    position: static;
+    transform: translateY(0%);
+    height: 100%;
+    li {
+      margin-right: 4rem;
+    }
+    li:not(:first-child) {
+      margin-top: 0;
+    }
+    a {
+      font-size: 1.15rem;
+    }
+  }
 }
