@@ -25,6 +25,7 @@ footer {
   top: 0;
 }
 .hamburger {
+  appearance: none;
   padding: 0.5rem 0.5rem 0 0;
 }
 .nav__list {
@@ -76,17 +77,26 @@ footer {
 }
 .tech__list {
   list-style: none;
-  flex: 0 0 50%;
+  flex: 0 0 45%;
   margin-bottom: 1rem;
-  .list__title {
-    color: $color--alt;
-    margin-bottom: 0.5rem;
-  }
-
-  li {
-    color: $color--accent;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05),
+    0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 1rem;
+  &:nth-child(even) {
+    margin-left: 1rem;
   }
 }
+
+.list__title {
+  color: $color--alt;
+  margin-bottom: 0.5rem;
+}
+
+li {
+  color: $color--accent;
+}
+
 // projects
 .project__card {
   display: flex;

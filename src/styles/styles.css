@@ -25,6 +25,9 @@ footer {
 }
 
 .hamburger {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   padding: 0.5rem 0.5rem 0 0;
 }
 
@@ -89,17 +92,25 @@ footer {
 .tech__list {
   list-style: none;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
   margin-bottom: 1rem;
+  -webkit-box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05), 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 1rem;
 }
 
-.tech__list .list__title {
+.tech__list:nth-child(even) {
+  margin-left: 1rem;
+}
+
+.list__title {
   color: #91457f;
   margin-bottom: 0.5rem;
 }
 
-.tech__list li {
+li {
   color: #5f4b8b;
 }
 
