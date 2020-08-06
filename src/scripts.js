@@ -34,9 +34,6 @@ const slideTwo = document.getElementsByClassName("intro__big")[1];
 const slideThree = document.getElementsByClassName("intro__big")[2];
 
 const time = () => {
-  slideOne.innerHTML = arrText[firstIndex];
-  slideTwo.innerHTML = arrText[secondIndex];
-  slideThree.innerHTML = arrText[thirdIndex];
   if (firstIndex >= arrText.length) {
     firstIndex = 0;
   }
@@ -48,7 +45,7 @@ const time = () => {
       slideThree.classList.add("slide__active");
       slideTwo.classList.remove("slide__hidden--left");
       slideTwo.classList.add("slide__hidden--right");
-      slideOne.innerHTML = arrText[firstIndex];
+      slideThree.innerHTML = arrText[firstIndex];
 
       firstIndex++;
       break;
@@ -59,7 +56,7 @@ const time = () => {
       slideTwo.classList.add("slide__active");
       slideOne.classList.remove("slide__hidden--left");
       slideOne.classList.add("slide__hidden--right");
-      slideThree.innerHTML = arrText[firstIndex];
+      slideTwo.innerHTML = arrText[firstIndex];
 
       firstIndex++;
       break;
@@ -70,7 +67,7 @@ const time = () => {
       slideOne.classList.add("slide__active");
       slideThree.classList.remove("slide__hidden--left");
       slideThree.classList.add("slide__hidden--right");
-      slideTwo.innerHTML = arrText[firstIndex];
+      slideOne.innerHTML = arrText[firstIndex];
 
       firstIndex++;
       break;
