@@ -76,6 +76,26 @@ footer {
     font-weight: 900;
     cursor: pointer;
     position: relative;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1.5rem;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: $color--main;
+      opacity: 0;
+      transform: translateX(-50%);
+      transition: transform 0.33s;
+    }
+    &:hover::after,
+    &:hover::before,
+    &:focus::after,
+    &:focus::before {
+      opacity: 1 !important;
+      transform: translateX(0%);
+    }
   }
 }
 .nav__list--passive {
@@ -389,6 +409,10 @@ li {
     a {
       font-size: 1.15rem;
       color: $color--accent;
+      &::after,
+      &::before {
+        background-color: $color--accent;
+      }
     }
   }
 

@@ -46,7 +46,6 @@ const time = () => {
       slideTwo.classList.remove("slide__hidden--left");
       slideTwo.classList.add("slide__hidden--right");
       slideThree.innerHTML = arrText[firstIndex];
-
       firstIndex++;
       break;
     case 1:
@@ -57,7 +56,6 @@ const time = () => {
       slideOne.classList.remove("slide__hidden--left");
       slideOne.classList.add("slide__hidden--right");
       slideTwo.innerHTML = arrText[firstIndex];
-
       firstIndex++;
       break;
     case 2:
@@ -68,7 +66,6 @@ const time = () => {
       slideThree.classList.remove("slide__hidden--left");
       slideThree.classList.add("slide__hidden--right");
       slideOne.innerHTML = arrText[firstIndex];
-
       firstIndex++;
       break;
   }
