@@ -117,6 +117,7 @@ footer {
 
 .slider__container {
   position: relative;
+  overflow: hidden;
   height: 4rem;
 }
 
