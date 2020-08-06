@@ -40,8 +40,6 @@ const time = () => {
   if (firstIndex >= arrText.length) {
     firstIndex = 0;
   }
-  console.log(activeSlide);
-  console.log(firstIndex);
   switch (activeSlide) {
     case 0:
       slideOne.classList.remove("slide__active");

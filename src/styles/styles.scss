@@ -39,6 +39,7 @@ footer {
   min-height: 3rem;
   top: 0;
   background-color: rgba($color--main, 0.8);
+  z-index: 10;
 }
 .hamburger {
   appearance: none;
@@ -134,7 +135,7 @@ footer {
   display: flex;
   margin-top: 0.5rem;
   p {
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: $color--analogous;
   }
 }
