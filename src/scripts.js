@@ -14,14 +14,13 @@ var firstIndex = 0;
 var secondIndex = 1;
 var thirdIndex = 2;
 
-var activeSlide = 1;
+var activeSlide = 0;
 const arrText = [
+  "Hello there!",
+  "¡Hola!",
   "Bonjour!",
   "Hallo!",
-  "Hello there!",
   "Ciao!",
-
-  "¡Hola!",
   "Olá!",
   "Привет!",
   "こんにちは！",
@@ -77,8 +76,37 @@ const time = () => {
   }
 };
 time();
-time();
-time();
+
 setInterval(function () {
   time();
-}, 3000);
+}, 2000);
+
+console.log("_________________________________");
+console.log("|:::::::::::::;;::::::::::::::::::|");
+console.log("|:::::::::::'~||~~~``:::::::::::::|");
+console.log("|::::::::'   .':     o`:::::::::::|");
+console.log("|:::::::' oo | |o  o    ::::::::::|");
+console.log("|::::::: 8  .'.'    8 o  :::::::::|");
+console.log("|::::::: 8  | |     8    :::::::::|");
+console.log("|::::::: _._| |_,...8    :::::::::|");
+console.log("|::::::'~--.   .--. `.   `::::::::|");
+console.log("|:::::'     =8     ~  \\ o ::::::::|");
+console.log("|::::'       8._ 88.   \\ o::::::::|");
+console.log("|:::'   __. ,.ooo~~.    \\ o`::::::|");
+console.log("|:::   . -. 88`78o/:     \\  `:::::|");
+console.log("|::'     /. o o \\ ::      \\88`::::|   Fight for the Empire!");
+console.log("|:;     o|| 8 8 |d.        `8 `:::|");
+console.log("|:.       - ^ ^ -'           `-`::|");
+console.log("|::.                          .:::|");
+console.log("|:::::.....           ::'     ``::|");
+console.log("|::::::::-'`-        88          `|");
+console.log("|:::::-'.          -       ::     |");
+console.log("|:-~. . .                   :     |");
+console.log("| .. .   ..:   o:8      88o       |");
+console.log("|. .     :::   8:P     d888. . .  |");
+console.log("|.   .   :88   88      888'  . .  |");
+console.log("|   o8  d88P . 88   ' d88P   ..   |");
+console.log("|  88P  888   d8P   ' 888         |");
+console.log("|   8  d88P.'d:8  .- dP~ o8       |");
+console.log("|      888   888    d~ o888    LS |");
+console.log("|_________________________________|");

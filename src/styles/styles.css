@@ -377,7 +377,7 @@ li {
           box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.project__source:hover {
+.project__source:hover, .project__source:focus {
   color: #91457f;
   opacity: 0.5;
 }
@@ -388,7 +388,7 @@ li {
   margin-left: 1rem;
 }
 
-.project__demo:hover {
+.project__demo:hover, .project__demo:focus {
   background-color: rgba(145, 69, 127, 0.5);
 }
 
@@ -423,6 +423,10 @@ li {
   display: -ms-flexbox;
   display: flex;
   font-size: 0.9rem;
+}
+
+.contact__link:hover, .contact__link:focus {
+  color: rgba(95, 75, 139, 0.5);
 }
 
 .contact__icon {

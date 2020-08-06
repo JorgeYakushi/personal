@@ -289,7 +289,8 @@ li {
 .project__source {
   color: $color--alt;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  &:hover {
+  &:hover,
+  &:focus {
     color: $color--alt;
     opacity: 0.5;
   }
@@ -299,7 +300,8 @@ li {
   color: $color--main;
   background-color: $color--alt;
   margin-left: 1rem;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: rgba($color--alt, 0.5);
   }
 }
@@ -329,6 +331,10 @@ li {
   color: $color--accent;
   display: flex;
   font-size: 0.9rem;
+  &:hover,
+  &:focus {
+    color: rgba($color--accent, 0.5);
+  }
 }
 .contact__icon {
   height: 1.25rem;
