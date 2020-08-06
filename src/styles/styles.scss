@@ -3,6 +3,8 @@ $color--accent: #5f4b8b;
 $color--accent--rgb: 95, 75, 139;
 $color--alt: #91457f;
 $color--analogous: #196ebd;
+$color--text: #404752;
+
 $f-family: "Lato", sans-serif;
 //base
 
@@ -47,9 +49,10 @@ footer {
   position: fixed;
   min-width: 50vw;
   background-color: $color--main;
+  background-color: $color--accent;
   height: 100vh;
   transition: transform 0.5s;
-  box-shadow: -2px 0px 4px 1px #ccc;
+  box-shadow: -1px 0px 2px 1px #eee;
 }
 .nav__list {
   position: absolute;
@@ -67,10 +70,11 @@ footer {
 
   a {
     text-decoration: none;
-    color: $color--accent;
+    color: $color--main;
     font-size: 1.35rem;
     font-weight: 900;
     cursor: pointer;
+    position: relative;
   }
 }
 .nav__list--passive {
@@ -87,17 +91,34 @@ footer {
   width: 90%;
   margin-left: 5%;
 }
-
-.intro__small {
-  color: $color--alt;
-}
-
 .intro__big {
+  color: $color--alt;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.intro__small {
+  color: $color--text;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.intro__strong {
   color: $color--accent;
-  font-weight: 900;
-  padding-left: 2.5%;
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+.intro__job {
+  display: flex;
+  margin-top: 0.5rem;
+  p {
+    font-size: 1rem;
+    color: $color--analogous;
+  }
 }
 
+.job__icon {
+  height: 1.25rem;
+  width: 2rem;
+}
 //section common
 
 .section__container {
@@ -106,21 +127,23 @@ footer {
   display: flex;
   flex-direction: column;
   > *:not(:first-child) {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
 }
 
 .section__title {
-  color: $color--alt;
-  font-weight: 700;
+  font-weight: 600;
 }
 .section__intro {
-  color: $color--accent;
-  font-weight: 700;
+  color: $color--text;
+  font-weight: 500;
 }
 
 //about
-
+.about__title {
+  color: $color--analogous;
+}
 .about__tech {
   display: flex;
   flex-wrap: wrap;
@@ -128,7 +151,7 @@ footer {
 }
 .tech__list {
   list-style: none;
-  flex: 0 0 45%;
+  flex: 0 0 40%;
   margin-bottom: 1rem;
   box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05),
     0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -137,16 +160,18 @@ footer {
 }
 
 .list__title {
-  color: $color--alt;
+  color: $color--analogous;
   margin-bottom: 0.5rem;
 }
 
 li {
-  color: $color--accent;
+  color: $color--text;
 }
 
 // projects
-
+.portfolio__title {
+  color: $color--alt;
+}
 .portfolio__projects {
   display: flex;
   flex-wrap: wrap;
@@ -159,7 +184,6 @@ li {
   display: flex;
   flex-direction: column;
   width: 90%;
-
   box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05),
     0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
@@ -180,7 +204,7 @@ li {
   display: none;
 }
 .card__text {
-  color: $color--accent;
+  color: $color--text;
 }
 
 .project__skills {
@@ -194,7 +218,7 @@ li {
   padding: 0.5rem;
   font-size: 0.75rem;
   margin-right: 0.5rem;
-  color: $color--accent;
+  color: $color--alt;
 }
 .project__links {
   display: flex;
@@ -209,20 +233,20 @@ li {
 }
 
 .project__source {
-  color: $color--accent;
+  color: $color--alt;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   &:hover {
-    color: $color--accent;
+    color: $color--alt;
     opacity: 0.5;
   }
 }
 
 .project__demo {
   color: $color--main;
-  background-color: $color--accent;
+  background-color: $color--alt;
   margin-left: 1rem;
   &:hover {
-    background-color: rgba($color--accent, 0.5);
+    background-color: rgba($color--alt, 0.5);
   }
 }
 .project__icon {
@@ -232,8 +256,11 @@ li {
 }
 
 // contact
+.contact__title {
+  color: $color--accent;
+}
 .contact__text {
-  font-weight: 700;
+  font-weight: 500;
   padding-bottom: 0.5rem;
 }
 .contact__list {
@@ -294,7 +321,7 @@ li {
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 800px) {
   .hamburger {
     display: none;
   }
@@ -323,6 +350,18 @@ li {
     }
     a {
       font-size: 1.15rem;
+      color: $color--accent;
+    }
+  }
+
+  .intro__container {
+    display: block;
+    text-align: center;
+    h4 {
+      display: inline-block;
+    }
+    .intro__job {
+      justify-content: center;
     }
   }
 }
@@ -337,6 +376,12 @@ li {
     section:nth-child(3),
     section:nth-child(4) {
       flex-basis: 50%;
+    }
+    .about__container {
+      margin-left: 10%;
+    }
+    .contact__container {
+      margin-left: 5%;
     }
   }
 }
