@@ -234,7 +234,7 @@ footer {
 }
 
 .about__title {
-  color: #196ebd;
+  color: #5f4b8b;
 }
 
 .about__tech {
@@ -267,7 +267,7 @@ footer {
 }
 
 .list__title {
-  color: #196ebd;
+  color: #5f4b8b;
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
@@ -399,7 +399,7 @@ li {
 }
 
 .contact__title {
-  color: #5f4b8b;
+  color: #196ebd;
 }
 
 .contact__text {
@@ -418,7 +418,7 @@ li {
 
 .contact__link {
   text-decoration: none;
-  color: #5f4b8b;
+  color: #196ebd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,14 +426,14 @@ li {
 }
 
 .contact__link:hover, .contact__link:focus {
-  color: rgba(95, 75, 139, 0.5);
+  color: rgba(25, 110, 189, 0.5);
 }
 
 .contact__icon {
   height: 1.25rem;
   width: 1rem;
   margin-right: 0.35rem;
-  fill: #5f4b8b;
+  fill: #196ebd;
 }
 
 .footer__container {

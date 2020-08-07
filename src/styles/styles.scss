@@ -187,7 +187,7 @@ footer {
 
 //about
 .about__title {
-  color: $color--analogous;
+  color: $color--accent;
 }
 .about__tech {
   display: flex;
@@ -210,7 +210,7 @@ footer {
 }
 
 .list__title {
-  color: $color--analogous;
+  color: $color--accent;
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
@@ -313,7 +313,7 @@ li {
 
 // contact
 .contact__title {
-  color: $color--accent;
+  color: $color--analogous;
 }
 .contact__text {
   font-weight: 500;
@@ -328,19 +328,19 @@ li {
 }
 .contact__link {
   text-decoration: none;
-  color: $color--accent;
+  color: $color--analogous;
   display: flex;
   font-size: 0.9rem;
   &:hover,
   &:focus {
-    color: rgba($color--accent, 0.5);
+    color: rgba($color--analogous, 0.5);
   }
 }
 .contact__icon {
   height: 1.25rem;
   width: 1rem;
   margin-right: 0.35rem;
-  fill: $color--accent;
+  fill: $color--analogous;
 }
 
 //footer
